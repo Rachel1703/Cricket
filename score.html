@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <h1><i>WINNER OF THE MATCH</i></h1>
+    <h3 id='team'></h3>
+    <h3 id='score'></h3>
+    <h2 id="mom"></h2>
+    <script>
+
+        var team1 = +(localStorage.getItem('res1'));
+
+        var team2 = +(localStorage.getItem('res2'));
+        var a1 = [];
+        var a2 = [];
+        a1 = localStorage.getItem('arr1');
+        a2 = localStorage.getItem('arr2');
+        var m1 = localStorage.getItem('mom1');
+        var m2 = localStorage.getItem('mom2');
+        console.log(m1, m2);
+        if (team1 > team2) {
+            document.getElementById('team').innerHTML = "Team 1  ";
+            document.getElementById('score').innerText = "Score : " + team1;
+            console.log(a1);
+            document.getElementById('mom').innerHTML = "Player  " + (+m1 + 1) + " is the man of the match";
+
+
+        }
+        else {
+            document.getElementById('team').innerHTML = "Team 2  ";
+            document.getElementById('score').innerText = "Score : " + team2;
+            console.log(a2);
+            document.getElementById('mom').innerHTML = "Player  " + (+m2 + 1) + " is the man of the match";
+
+
+        }
+    </script>
+</body>
+
+</html>
